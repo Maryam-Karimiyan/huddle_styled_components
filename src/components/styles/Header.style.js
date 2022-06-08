@@ -1,0 +1,39 @@
+import style from 'styled-components'
+export const StyledHeader = style.header`
+    background-color:${({theme})=>theme.colors.header};
+    padding:40px 0;
+
+    // h1{
+    //     color:red;
+    // }
+
+    // &:hover{
+    //     background-color:black;
+    // }
+`;
+//because nav an logo are in header so we style them here
+export const Nav = style.nav`
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ margin-bottom:40px;
+
+ @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+ }
+`;
+
+export const Logo = style.img`
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-bottom:40px;
+    }
+`;
+export const Image = style.img`
+width:375px;
+margin-left:40px;
+
+@media (max-width: ${({ theme }) => theme.mobile}) {
+    margin: 40px 0 30px;
+  }
+    
+`;
